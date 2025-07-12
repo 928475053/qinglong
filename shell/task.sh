@@ -20,6 +20,8 @@ define_program() {
     which_program="."
   elif [[ $file_param == *.ts ]]; then
     which_program="ts-node-transpile-only"
+  elif [[ $file_param == *.cs ]]; then
+    which_program="dotnet run"
   else
     which_program=""
   fi
